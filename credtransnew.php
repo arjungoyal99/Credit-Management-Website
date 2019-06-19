@@ -1,18 +1,9 @@
 <?php 
 	$hostname="localhost";
-	$username="root";
-	$pass="";
-	$con=mysqli_connect($hostname,$username,$pass);
-	if(!$con)
-	{
-		die('Could not connect'.mysql_error());
-	}
-	$db="tsp";
-	$y=mysqli_select_db($con,$db);
-	if (!$y)
-	{
-			die('Could not select db'.mysql_error());
-	}
+    $username="id9956387_arjun";
+    $pass="arjun987";
+    $db="id9956387_tsp";
+    $con=mysqli_connect($hostname,$username,$pass,$db);
 	if(isset($_POST["submit"]))
 	{
 		echo '<section class="banner-area relative">
@@ -21,6 +12,7 @@
 				<div class="row fullscreen justify-content-center align-items-center">
 					<div class="col-lg-8">
 						<div class="banner-content text-center">
+						<h5>Payment Gateway : Do not refresh the page</h5>
 							';
 		$em = $_POST["sel"];
 		$sql=mysqli_query($con,"select * from user where email='$em'");
