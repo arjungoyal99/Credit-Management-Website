@@ -52,19 +52,10 @@ window.addEventListener( "pageshow", function ( event ) {
 							<h1 class="text-uppercase text-white">Select a user</h1>
 							<?php
 								$hostname="localhost";
-								$username="root";
-								$pass="";
-								$con=mysqli_connect($hostname,$username,$pass);
-								if(!$con)
-								{
-									die('Could not connect'.mysql_error());
-								}
-								$db="tsp";
-								$y=mysqli_select_db($con,$db);
-								if (!$y)
-								{
-										die('Could not select db'.mysql_error());
-								}
+                                $username="id9956387_arjun";
+                                $pass="arjun987";
+                                $db="id9956387_tsp";
+                                $con=mysqli_connect($hostname,$username,$pass,$db);
 								$result=mysqli_query($con,"select * from user");
 								echo '<form method = "POST" id="myform" name="myform" action = "credtransnew.php" onsubmit="return check()"></form>';
 								echo "<table class='hoverTable' align='center'>";
@@ -85,7 +76,7 @@ window.addEventListener( "pageshow", function ( event ) {
 									 echo"</tr>";
 								}
 								echo "</table>";
-								echo "<input type='submit' name='submit' form='myform' class='primary-btn banner-btn'>";
+								echo "<input type='submit' value='Enter Payment Gateway' name='submit' form='myform' class='primary-btn banner-btn'>";
 
 							?>
 						</div>
